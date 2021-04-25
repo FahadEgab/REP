@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Expert.master.cs" Inherits="REP.ExpertDB.Expert" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet' />
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="../css/Dashboard.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+      <style>
+        .badge {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    font-size: x-small;
+    border-radius: 50%;
+    background: red;
+    color: white;
+}
+    </style>
+    <script
+  src="https://code.jquery.com/jquery-1.11.3.min.js"
+  integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g="
+  crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-1.11.3.min.js"
+  integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g="
+  crossorigin="anonymous"></script>
+</head>
+<body id="body-pd">
+    <form id="form1" runat="server">
+        <div>
+            <header class="header" id="header">
+                  <div class="header__img">
+
+                    
+                    <a href="#" class="nav__link2">
+                        <i class='bx bx-notification'>
+                            <span class="badge">
+                                <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                            </span>
+
+                        </i>
+
+                    </a>
+                </div>
+                <div class="header__toggle">
+                    <i class='bx bx-menu' id="header-toggle"></i>
+                </div>
+            </header>
+
+            <div class="l-navbar" id="nav-bar">
+                <nav class="nav">
+                    <div>
+                        <a href="../Index.aspx" class="nav__logo">
+                            <i class='bx bx-layer nav__logo-icon'></i>
+                            <span class="nav__logo-name">الخبراء المتقاعدين</span>
+                        </a>
+
+                        <div class="nav__list">
+                            <a href="Info.aspx" id="dash" class="nav__link active">
+                                <i class='bx bx-grid-alt nav__icon'></i>
+                                <span class="nav__name">المعلومات الاساسية</span>
+                            </a>
+
+                            <a href="edit.aspx" id="users" class="nav__link">
+                                <i class='bx bx-user nav__icon'></i>
+                                <span class="nav__name">تعديل المعلومات </span>
+                            </a>
+
+                            <a href="consult.aspx" id="msgs" class="nav__link">
+                                <i class='bx bx-message-square-detail nav__icon'></i>
+                                <span class="nav__name">الاستشارات</span>
+                            </a>
+
+                            <a href="complimants.aspx" id="comp" class="nav__link">
+                                <i class='bx bx-bookmark nav__icon'></i>
+                                <span class="nav__name">الشكاوى والافتراحات</span>
+                            </a>
+
+                           
+                        </div>
+                    </div>
+                    <asp:LinkButton ID="LinkButton1" CssClass="nav__link" runat="server" OnClick="LinkButton1_Click">
+  <i class='bx bx-log-out nav__icon'></i>
+                        <span class="nav__name">تسجيل الخروج</span>
+                    </asp:LinkButton>
+
+                    
+                </nav>
+            </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <!--===== MAIN JS =====-->
+            <script src="../js/Dashboard.js"></script>
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+           
+        </div>
+    </form>
+</body>
+</html>

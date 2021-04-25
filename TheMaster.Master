@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TheMaster.master.cs" Inherits="REP.TheMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="images/iconLogo.png" rel="shortcut icon" type="image/x-icon">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+        <nav class="navbar navbar-expand-md fixed-top  navbar-light bg-light navbar" dir="rtl">
+            <a class="navbar-brand brandi" href="Index.aspx">
+                <img src="images/logo.png" alt="" height="70">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav" style="text-align: center;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Category.aspx">التخصصات</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link" id="bes" href="#best">أفضل الخبراء</a>
+
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link" id="abou" href="#about">من نحن</a>
+
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link" id="contac" href="#contact">تواصل معنا</a>
+
+                    </li>
+
+
+                </ul>
+
+
+                <div class="form-inline my-lg-0" style="text-align: center; flex-flow: inherit;">
+
+                    <asp:TextBox ID="TextBox1" CssClass="form-control mr-sm-2" placeholder="اكتب ماتريد" runat="server"></asp:TextBox>
+                    <asp:Button ID="Button1" CssClass="btn btn-outline-success my-2 my-sm-0" runat="server" Text="بحث" OnClick="Button1_Click" />
+
+                </div>
+
+
+                <div class="mr-auto my-lg-0" style="text-align: center;" id="fis">
+
+
+                    <asp:Button CssClass="btn btn-primary my-2 my-sm-0" Style="margin-right: 10px;" ID="Button2" runat="server" Text="تسجيل الدخول" OnClick="Button2_Click" />
+                    <asp:Button CssClass="btn btn-success my-2 my-sm-0" Style="margin-right: 10px;" ID="Button3" runat="server" Text="تسجيل جديد" OnClick="Button3_Click" />
+
+
+
+
+
+                    <asp:Button CssClass="btn btn-primary my-2 my-sm-0" Style="margin-right: 10px;" ID="Button4" runat="server" Text="الملف الشخصي" OnClick="Button4_Click" />
+                    <asp:Button CssClass="btn btn-danger my-2 my-sm-0" Style="margin-right: 10px;" ID="Button5" runat="server" Text="تسجيل الخروج" OnClick="Button5_Click" />
+                </div>
+
+
+
+            </div>
+
+
+        </nav>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    </form>
+    <footer class="text-center">
+        <!-- Grid container -->
+        <div class="container p-4"></div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3">
+            GP6  جميع الحقوق محفوظة لطلاب مشروع التخرج 
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+</html>

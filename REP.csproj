@@ -1,0 +1,599 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C2E345A-A9C6-433A-BCA5-3FC284F95BC8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>REP</RootNamespace>
+    <AssemblyName>REP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44380</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Active.aspx" />
+    <Content Include="AdminDB\Categories.aspx" />
+    <Content Include="AdminDB\Complamntes.aspx" />
+    <Content Include="AdminDB\dashboard.aspx" />
+    <Content Include="AdminDB\messages.aspx" />
+    <Content Include="AdminDB\signUpExpert.aspx" />
+    <Content Include="AdminDB\statices.aspx" />
+    <Content Include="AdminDB\users.aspx" />
+    <Content Include="Category.aspx" />
+    <Content Include="change.aspx" />
+    <Content Include="Consulting.aspx" />
+    <Content Include="css\admin.css" />
+    <Content Include="css\card.css" />
+    <Content Include="css\consult.css" />
+    <Content Include="css\Dashboard.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\profile.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\webflow.css" />
+    <Content Include="css\xxxxproject.webflow.css" />
+    <Content Include="ExpertDB\Acceptance.aspx" />
+    <Content Include="ExpertDB\Answer.aspx" />
+    <Content Include="ExpertDB\complimants.aspx" />
+    <Content Include="ExpertDB\consult.aspx" />
+    <Content Include="ExpertDB\edit.aspx" />
+    <Content Include="ExpertDB\Info.aspx" />
+    <Content Include="ExpertDB\ShowEnd.aspx" />
+    <Content Include="ExpertProfile.aspx" />
+    <Content Include="Experts.aspx" />
+    <Content Include="forget.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\1615704-p-1080.jpeg" />
+    <Content Include="images\1615704-p-500.jpeg" />
+    <Content Include="images\1615704-p-800.jpeg" />
+    <Content Include="images\1615704.jpg" />
+    <Content Include="images\30-35-years-old-happy-office-one-person.jpg" />
+    <Content Include="images\380548.jpg" />
+    <Content Include="images\3f4eb74a-p-1080x715.jpeg" />
+    <Content Include="images\3f4eb74a-p-130x130q80.jpeg" />
+    <Content Include="images\3f4eb74a-p-500x331.jpeg" />
+    <Content Include="images\3f4eb74a-p-800x530.jpeg" />
+    <Content Include="images\3f4eb74a.jpg" />
+    <Content Include="images\51941995ad0419c8d32d2d6f60382ce6.png" />
+    <Content Include="images\53-1-1024x600.jpg" />
+    <Content Include="images\5378-p-1080.jpeg" />
+    <Content Include="images\5378.jpg" />
+    <Content Include="images\81a14e402e9f4501fb2efa97ecc763de-p-1600.jpeg" />
+    <Content Include="images\81a14e402e9f4501fb2efa97ecc763de-p-2000.jpeg" />
+    <Content Include="images\81a14e402e9f4501fb2efa97ecc763de-p-2600.jpeg" />
+    <Content Include="images\81a14e402e9f4501fb2efa97ecc763de-p-3200.jpeg" />
+    <Content Include="images\81a14e402e9f4501fb2efa97ecc763de-p-800.jpeg" />
+    <Content Include="images\81a14e402e9f4501fb2efa97ecc763de.jpg" />
+    <Content Include="images\baseline_dns_white_36dp.png" />
+    <Content Include="images\Contact-Us-26-Apr-p-1080.jpeg" />
+    <Content Include="images\Contact-Us-26-Apr-p-500.jpeg" />
+    <Content Include="images\Contact-Us-26-Apr-p-800.jpeg" />
+    <Content Include="images\Contact-Us-26-Apr.jpg" />
+    <Content Include="images\content-senior-expert-pointing-bar-chart_1262-1791.jpg" />
+    <Content Include="images\d7me.jpeg" />
+    <Content Include="images\download-1.jpg" />
+    <Content Include="images\download.png" />
+    <Content Include="images\eror404.png" />
+    <Content Include="images\error-404-concept-landing-page_23-2148246764.jpg" />
+    <Content Include="images\expert-default-img.jpg" />
+    <Content Include="images\expert.jpg" />
+    <Content Include="images\fahad.jpeg" />
+    <Content Include="images\Fahad2.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\footer-bg-p-1080x658.jpeg" />
+    <Content Include="images\footer-bg-p-130x130q80.jpeg" />
+    <Content Include="images\footer-bg-p-1600x975.jpeg" />
+    <Content Include="images\footer-bg-p-2000x1219.jpeg" />
+    <Content Include="images\footer-bg-p-2600x1584.jpeg" />
+    <Content Include="images\footer-bg-p-500x305.jpeg" />
+    <Content Include="images\footer-bg-p-800x488.jpeg" />
+    <Content Include="images\footer-bg.jpg" />
+    <Content Include="images\header-terminal-operating-system-documentation-p-1600.jpeg" />
+    <Content Include="images\header-terminal-operating-system-documentation-p-500.jpeg" />
+    <Content Include="images\header-terminal-operating-system-documentation-p-800.jpeg" />
+    <Content Include="images\header-terminal-operating-system-documentation.jpg" />
+    <Content Include="images\I1.png" />
+    <Content Include="images\iconLogo.PNG" />
+    <Content Include="images\images.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logoz-p-500.png" />
+    <Content Include="images\logoz.png" />
+    <Content Include="images\Majid.jpeg" />
+    <Content Include="images\MotiveSolutions-p-500.jpeg" />
+    <Content Include="images\MotiveSolutions-p-800.jpeg" />
+    <Content Include="images\MotiveSolutions.jpg" />
+    <Content Include="images\omar.jpeg" />
+    <Content Include="images\photo-1498050108023-c5249f4df085-p-800.jpeg" />
+    <Content Include="images\photo-1498050108023-c5249f4df085.jpg" />
+    <Content Include="images\Reciprocate-favor-negotiate-Two-young-businessmen-shaking-hands-2-Shutterstock_1312231271-p-1080.jpeg" />
+    <Content Include="images\Reciprocate-favor-negotiate-Two-young-businessmen-shaking-hands-2-Shutterstock_1312231271.jpg" />
+    <Content Include="images\senior-man-writing-memoirs-in-book-sitting-at-desk-PDNCJJH-800x533-p-500.jpeg" />
+    <Content Include="images\senior-man-writing-memoirs-in-book-sitting-at-desk-PDNCJJH-800x533.jpg" />
+    <Content Include="images\shutterstock_1165383133-1024x1024-p-500.jpeg" />
+    <Content Include="images\shutterstock_1165383133-1024x1024-p-800.jpeg" />
+    <Content Include="images\shutterstock_1165383133-1024x1024.jpg" />
+    <Content Include="images\social-03.svg" />
+    <Content Include="images\social-07.svg" />
+    <Content Include="images\social-18.svg" />
+    <Content Include="images\star.png" />
+    <Content Include="images\user.jpg" />
+    <Content Include="images\Wall-p-1080.png" />
+    <Content Include="images\Wall-p-500.png" />
+    <Content Include="images\Wall-p-800.png" />
+    <Content Include="images\Wall.png" />
+    <Content Include="images\Wall1-p-500.png" />
+    <Content Include="images\Wall1-p-800.png" />
+    <Content Include="images\Wall1.png" />
+    <Content Include="images\Wall2-p-500.png" />
+    <Content Include="images\Wall2.png" />
+    <Content Include="images\webclip.png" />
+    <Content Include="images\code.jpeg" />
+    <Content Include="images\WIN_20210216_20_20_57_Pro.jpg" />
+    <Content Include="images\فهد المطيري %28345 of 1%29-Edit.jpg" />
+    <Content Include="Index.aspx" />
+    <Content Include="js\Dashboard.js" />
+    <Content Include="js\webflow.js" />
+    <Content Include="Search.aspx" />
+    <Content Include="SignIn.aspx" />
+    <Content Include="Sign\chose.aspx" />
+    <Content Include="Sign\signexpert1.aspx" />
+    <Content Include="Sign\signexpert2.aspx" />
+    <Content Include="Sign\signexpert3.aspx" />
+    <Content Include="Sign\signUser1.aspx" />
+    <Content Include="Sign\signUser2.aspx" />
+    <Content Include="Sign\speical.aspx" />
+    <Content Include="UserDB\Acceptance.aspx" />
+    <Content Include="UserDB\complimants.aspx" />
+    <Content Include="UserDB\Consult.aspx" />
+    <Content Include="UserDB\Consulttt.aspx" />
+    <Content Include="UserDB\edit.aspx" />
+    <Content Include="UserDB\Info.aspx" />
+    <Content Include="UserDB\ShowCompleted.aspx" />
+    <Content Include="UserDB\ShowEnd.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Active.aspx.cs">
+      <DependentUpon>Active.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Active.aspx.designer.cs">
+      <DependentUpon>Active.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDB\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDB\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDB\Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDB\Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDB\Complamntes.aspx.cs">
+      <DependentUpon>Complamntes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDB\Complamntes.aspx.designer.cs">
+      <DependentUpon>Complamntes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDB\dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDB\dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDB\messages.aspx.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDB\messages.aspx.designer.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDB\signUpExpert.aspx.cs">
+      <DependentUpon>signUpExpert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDB\signUpExpert.aspx.designer.cs">
+      <DependentUpon>signUpExpert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDB\statices.aspx.cs">
+      <DependentUpon>statices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDB\statices.aspx.designer.cs">
+      <DependentUpon>statices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDB\users.aspx.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDB\users.aspx.designer.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="change.aspx.cs">
+      <DependentUpon>change.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="change.aspx.designer.cs">
+      <DependentUpon>change.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Admin.cs" />
+    <Compile Include="Classes\Category.cs" />
+    <Compile Include="Classes\Consultings.cs" />
+    <Compile Include="Classes\Experts.cs" />
+    <Compile Include="Classes\Subcategory.cs" />
+    <Compile Include="Classes\SuggestionsComplaints.cs" />
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="Consulting.aspx.cs">
+      <DependentUpon>Consulting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consulting.aspx.designer.cs">
+      <DependentUpon>Consulting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertDB\Acceptance.aspx.cs">
+      <DependentUpon>Acceptance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpertDB\Acceptance.aspx.designer.cs">
+      <DependentUpon>Acceptance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertDB\Answer.aspx.cs">
+      <DependentUpon>Answer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpertDB\Answer.aspx.designer.cs">
+      <DependentUpon>Answer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertDB\complimants.aspx.cs">
+      <DependentUpon>complimants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpertDB\complimants.aspx.designer.cs">
+      <DependentUpon>complimants.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertDB\consult.aspx.cs">
+      <DependentUpon>consult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpertDB\consult.aspx.designer.cs">
+      <DependentUpon>consult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertDB\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpertDB\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertDB\Expert.Master.cs">
+      <DependentUpon>Expert.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpertDB\Expert.Master.designer.cs">
+      <DependentUpon>Expert.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertDB\Info.aspx.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpertDB\Info.aspx.designer.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertDB\ShowEnd.aspx.cs">
+      <DependentUpon>ShowEnd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpertDB\ShowEnd.aspx.designer.cs">
+      <DependentUpon>ShowEnd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertProfile.aspx.cs">
+      <DependentUpon>ExpertProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpertProfile.aspx.designer.cs">
+      <DependentUpon>ExpertProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Experts.aspx.cs">
+      <DependentUpon>Experts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Experts.aspx.designer.cs">
+      <DependentUpon>Experts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forget.aspx.cs">
+      <DependentUpon>forget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forget.aspx.designer.cs">
+      <DependentUpon>forget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign\chose.aspx.cs">
+      <DependentUpon>chose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign\chose.aspx.designer.cs">
+      <DependentUpon>chose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign\signexpert1.aspx.cs">
+      <DependentUpon>signexpert1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign\signexpert1.aspx.designer.cs">
+      <DependentUpon>signexpert1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign\signexpert2.aspx.cs">
+      <DependentUpon>signexpert2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign\signexpert2.aspx.designer.cs">
+      <DependentUpon>signexpert2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign\signexpert3.aspx.cs">
+      <DependentUpon>signexpert3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign\signexpert3.aspx.designer.cs">
+      <DependentUpon>signexpert3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign\signUser1.aspx.cs">
+      <DependentUpon>signUser1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign\signUser1.aspx.designer.cs">
+      <DependentUpon>signUser1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign\signUser2.aspx.cs">
+      <DependentUpon>signUser2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign\signUser2.aspx.designer.cs">
+      <DependentUpon>signUser2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Sign\speical.aspx.cs">
+      <DependentUpon>speical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign\speical.aspx.designer.cs">
+      <DependentUpon>speical.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TheMaster.Master.cs">
+      <DependentUpon>TheMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TheMaster.Master.designer.cs">
+      <DependentUpon>TheMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserDB\Acceptance.aspx.cs">
+      <DependentUpon>Acceptance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDB\Acceptance.aspx.designer.cs">
+      <DependentUpon>Acceptance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDB\complimants.aspx.cs">
+      <DependentUpon>complimants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDB\complimants.aspx.designer.cs">
+      <DependentUpon>complimants.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDB\Consult.aspx.cs">
+      <DependentUpon>Consult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDB\Consult.aspx.designer.cs">
+      <DependentUpon>Consult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDB\Consulttt.aspx.cs">
+      <DependentUpon>Consulttt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDB\Consulttt.aspx.designer.cs">
+      <DependentUpon>Consulttt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDB\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDB\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDB\Info.aspx.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDB\Info.aspx.designer.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDB\Profile.Master.cs">
+      <DependentUpon>Profile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDB\Profile.Master.designer.cs">
+      <DependentUpon>Profile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserDB\ShowCompleted.aspx.cs">
+      <DependentUpon>ShowCompleted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDB\ShowCompleted.aspx.designer.cs">
+      <DependentUpon>ShowCompleted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDB\ShowEnd.aspx.cs">
+      <DependentUpon>ShowEnd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDB\ShowEnd.aspx.designer.cs">
+      <DependentUpon>ShowEnd.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\23830-4_b0.ttf" />
+    <Content Include="fonts\din-next-lt-w23-regular.ttf" />
+    <Content Include="AdminDB\admin.Master" />
+    <Content Include="ExpertDB\Expert.Master" />
+    <None Include="packages.config" />
+    <Content Include="TheMaster.Master" />
+    <Content Include="UserDB\Profile.Master" />
+    <Content Include="Sign\Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AnswersAttachedFiles\" />
+    <Folder Include="AttachedFiles\" />
+    <Folder Include="Certificates\" />
+    <Folder Include="Icons\" />
+    <Folder Include="QRCodes\" />
+    <Folder Include="UserImage\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50034</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44380/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

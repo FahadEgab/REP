@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="REP.Sign.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>تسجيل حساب جديد</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-image: url(../images/Wall.png);background-size: cover;">
+    <form id="form1" runat="server">
+      <div class="container">  
+             <nav class="navbar navbar-expand-md fixed-top  navbar-light bg-light navbar" dir="rtl">
+            <a class="navbar-brand brandi" href="../Index.aspx">
+                <img src="../images/logo.png" alt="" height="70">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav" style="text-align: center;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Index.aspx">التخصصات</a>
+                    </li>
+                   
+                    
+                    
+
+                </ul>
+
+
+                
+
+
+                <div class="mr-auto my-lg-0" style="text-align: center;">
+
+
+                    <asp:Button ID="Button1" runat="server" Text="تسجيل الدخول" class="btn btn-primary my-2 my-sm-0"  style="margin-right: 10px;" OnClick="Button1_Click" />
+                    <asp:Button ID="Button2" runat="server" Text="تسجيل جديد" class="btn btn-success my-2 my-sm-0" style="margin-right: 10px;" OnClick="Button2_Click" />
+                    
+
+                    </div>
+
+                    
+
+              
+
+            </div>
+           
+            
+        </nav>
+
+
+    </div>
+       
+
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            
+
+
+
+
+
+
+
+    <footer class="text-center bg-light">
+        <!-- Grid container -->
+        <div class="container p-4"></div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3">
+            © 2021 Copyright:
+            GP6 طلاب مشروع التخرج
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <script>
+        $(".jumbotron").css({ height: $(window).height() + "px" });
+
+        $(window).on("resize", function () {
+            $(".jumbotron").css({ height: $(window).height() + "px" });
+        });
+
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+        
+    </form>
+</body>
+</html>
